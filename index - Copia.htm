@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer Namorar Comigo?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffc0cb; /* rosa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #ff69b4; /* rosa-choque */
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #d65d8b; /* rosa-choque mais escuro */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quer Namorar Comigo?</h1>
+        <button onclick="responder('Sim')">Sim</button>
+        <button onclick="responder('Não')">Não</button>
+    </div>
+
+
+    <script>
+        function responder(resposta) {
+            if (resposta === 'Sim') {
+                alert('Que legal! Vamos começar esse novo capítulo juntos!');
+            } else {
+                alert('Vai toma no seu cu então');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2></h2>
+        <button onclick="toggleAudio()">Musica</button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/12.mp3" type="audio/mpeg">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+
+    <script>
+        const audio = document.getElementById("bgMusic");
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
